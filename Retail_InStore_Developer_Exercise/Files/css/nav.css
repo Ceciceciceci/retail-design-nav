@@ -1,0 +1,84 @@
+
+/* 02/24/2020 - Cecilia Tran */
+
+/********** IMPORT **********/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/****************************/
+/********* GENERAL **********/
+/****************************/
+/*Clear out any white space*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+  }
+*::before,
+*::after {
+	-webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+*:focus {
+	outline: none !important;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    /* font-weight: 500; */
+    /* color: #202124; */
+    /* background-color: #ffffff; */
+    visibility: visible;
+    position: relative;
+}
+li, ul{
+    list-style-type: none;
+    /* display: inline-block; */
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+/****************************/
+/********** PRESETS *********/
+/****************************/
+.fs-14{ font-size:0.8em; }
+.gray{ color:#A1A0A1; } /*for starting text and possibly border bottom*/
+.blue{ color:#2084C5; } /*for hover*/
+.black{ color:#0C0C0C;} /*clicked nav link*/
+/* more for notes to self to keep color conventions */
+
+
+/****************************/
+/******** NAVIGATION ********/
+/****************************/
+.navigation-container{
+    padding-top: 250px;
+    margin: 0px 30px;
+}
+nav{
+    padding-bottom: 10px;
+    border-bottom: 1px #DFDEDF solid;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li {
+    padding: 0px 35px; 
+    display: inline-block;
+}
+nav li a:hover{
+    color: #2084C5;
+}
+
+#currentLink{
+    position: absolute;
+	bottom: -1px; 
+	left: 0; 
+	width: 100px; 
+	height: 1px; 
+	background: #0C0B0C;
+}
