@@ -77,8 +77,6 @@ var resize = (item) => {
 //utc for each city, will map it
 //Would like to use Google Time API but for less library use, I forgo using it
 function displayTime(city) {
-    document.getElementById('date-display').innerHTML = "";
-    document.getElementById('clock-display').innerHTML = "";
     document.getElementById('desc').style.opacity = 0;
     const savedCity = city;
     let utcNum = 0;
@@ -107,28 +105,29 @@ function displayTime(city) {
         default:
           utcNum = -8;
       }
+
+    //get the day
     var cityDate = calcTime(savedCity, utcNum);
     var dt = new Date(cityDate);
     var yyyy = dt.getFullYear();
     var mm = dt.toLocaleString('default', { month: 'long' });
     var dd = (dt.getDate() + 1 < 10) ? ("0" + dt.getDate()) : (dt.getDate());
     var date = mm + ' ' + dd +  ', ' + yyyy;
-
+    //get the time 
     var ampm = (dt.getHours() > 12) ? ('pm') : ('am');
     var hh = (dt.getHours() > 12) ? (dt.getHours() - 12) : (dt.getHours());
     var mm = (dt.getMinutes() < 10) ? ("0" + (dt.getMinutes())) : (dt.getMinutes());
     var ss = (dt.getSeconds() < 10) ? ("0" + dt.getSeconds()) : (dt.getSeconds());
     var time = hh + " : " + mm + " : " + ss + "   " + ampm; //cupertino time
 
+    //display it
     document.getElementById('date-display').innerHTML = date; //mm dd, yyyy
     document.getElementById('clock-display').innerHTML = time; // h : mm : ss 
     document.getElementById('date-display').style.opacity = 1;
     document.getElementById('clock-display').style.opacity = 1;
-   
+
     //update time per second
-    // console.log(savedCity);
-    setTimeout(displayTime, 1000, savedCity);
-     console.log("city: " + savedCity);
+    // setTimeout(displayTime, 1000, savedCity);
 }
 
 function calcTime(city, offset) {
