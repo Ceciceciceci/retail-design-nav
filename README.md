@@ -7,6 +7,6 @@ I did not use as many libraries as I could. It was done in mostly pure JS, no jQ
 Some HTML5 and CSS3 was also used. Let me know if you have any more questions. Thank you for letting me participate in taking this test. In this project, I also included videos of the test in case, something happens. One for Safari and one for Chrome. 
 
 Extra Credit portion: 
-For the clock, I wish I could use Google's Time Zone API but I didn't want to import any library unless it was React or Sass as per instructions. So a switch statement was used instead since there was only a few locations. However, this would not be sustainable for > 10 locations.
+For the clock, I wish I could use Google's Time Zone API but I didn't want to import any library unless it was React or Sass as per instructions. So a switch statement was used instead since there was only a few locations. However, this would not be sustainable for > 10 locations. But the clocks do change between the location.
 
 - Cecilia
