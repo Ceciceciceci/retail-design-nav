@@ -12,7 +12,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-size: 1em; */
   }
 *::before,
 *::after {
@@ -37,7 +36,7 @@ li, ul{
 .gray{ color:#A1A0A1; } /*for starting text and possibly border bottom*/
 .blue{ color:#2084C5; } /*for hover*/
 .black{ color:#0C0C0C;} /*clicked nav link*/
-/* more for notes to self to keep color/font conventions */
+/* checked in photoshop for these colors */
 
 /******** NAVIGATION ********/
 .navigation-container{

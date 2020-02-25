@@ -76,7 +76,7 @@ var resize = (item) => {
 //display time [8, 5, 0, 1, 9, 8, 11]
 //utc for each city, will map it
 //Would like to use Google Time API but for less library use, I forgo using it
-function displayTime(city) {
+var displayTime = (city) => {
     document.getElementById('desc').style.opacity = 0;
     const savedCity = city;
     let utcNum = 0;
@@ -127,10 +127,10 @@ function displayTime(city) {
     document.getElementById('clock-display').style.opacity = 1;
 
     //update time per second
-    // setTimeout(displayTime, 1000, savedCity);
+    // setTimeout(displayTime, 1000);
 }
 
-function calcTime(city, offset) {
+var calcTime = (city, offset) =>  {
     // create Date object for current location
     let d = new Date();
     // get UTC time in msec
