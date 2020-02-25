@@ -24,7 +24,6 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    visibility: visible;
     position: relative;
 }
 li, ul{
@@ -49,6 +48,7 @@ nav{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    overflow: hidden;
 }
 nav ul li {
     padding: 0px 35px; 

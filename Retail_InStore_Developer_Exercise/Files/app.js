@@ -142,4 +142,15 @@ var calcTime = (city, offset) =>  {
     return newDate.toLocaleString();
 }
 
-
+//On resize, move the line to the current location of active clicked link
+document.getElementsByTagName("body")[0].onresize = function() {
+    let newLeftPos = "";
+    document.querySelectorAll('a').forEach(item => {  //loop through all a to check which one has active tag
+        if (document.getElementById(item.id).classList.contains("active")){
+            //if this link is active set the new Left pixel pos var to the active
+            newLeftPos = document.getElementById(item.id).offsetLeft;
+        }
+        //set the curr line position to the new left position
+        document.getElementById("currentLink").style.left = newLeftPos + "px";
+    });
+};
