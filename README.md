@@ -1,4 +1,4 @@
-Hello Critical Mass, Dan, and team.
+Hello Critical Mass
 
 This is my repository for the project for the interview.
 This project was tested and ran on my local server at port 8080 using XAMPP.  You will have to store the folder inside named retail-nav in htdocs and run it on your local server and serve it at http://localhost:8080/retail-nav/ .
